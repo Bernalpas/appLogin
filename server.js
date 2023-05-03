@@ -9,15 +9,19 @@ const path = require('path');
 //const path = require('node:path'); 
 const hbs = require('hbs');
 const userRouter = require('./router/userRouter');
-/* const clientRouter = require('./router/clientRouter'); */
+const productRouter = require('./router/productRouter'); 
+
+
+
 //middlewares
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+
 //uso de rutas
 app.use('/', userRouter);
-/* app.use('/client', clientRouter)
-app.use('/product', productRouter)  */
-
+app.use('/product', productRouter);
+// app.use('/client', clientRouter)
 
 
 //Configuramos el motor de Plantillas de HBS

@@ -1,5 +1,5 @@
 
-//reaponde a la ruta '/'
+//responde a la ruta '/'
 
 const express = require('express');
 const { check, body } = require('express-validator');
@@ -39,11 +39,5 @@ router.post(
         body('password').isLength({ min: 8 })
     ,registerUser
 ); 
-
-
-
-
-
-
 
 module.exports = router;
